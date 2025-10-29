@@ -7,3 +7,16 @@
 pip install pillow imagehash
 python index.py
 ```
+
+<!-- Cái hiện tại đang dùng -->
+hash_map[filename] = imagehash.average_hash(img)
+Máy yếu, chỉ cần lọc trùng hệt
+dùng trước để test
+<!-- Thay thế -->
+Perceptual Hash - phash()
+hash_map[filename] = imagehash.phash(img)
+Máy yếu, ảnh chụp thật, ánh sáng khác nhau
+<!-- Thay thế 2 -->
+Difference Hash - dHash()
+hash_map[filename] = imagehash.dhash(img)
+Cần tốc độ trung bình và cân bằng chính xác
